@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="3D Portfolio">
+    <meta name="author" content="Mr. Kelly">
+    <title>3D Portfolio</title>
+    
+    <!-- Google Fonts (optimally loaded) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for social icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header/Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">3D PORTFOLIO</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="gallery-section">
+            <h2>3D Projects</h2>
+            <div class="gallery">
+                <div class="gallery-item" id="project1"></div>
+                <div class="gallery-item" id="project2"></div>
+                <div class="gallery-item" id="project3"></div>
+                <div class="gallery-item" id="project4"></div>
+                <div class="gallery-item" id="project5"></div>
+                <div class="gallery-item" id="project6"></div>
+                <div class="gallery-item" id="project7"></div>
+                <div class="gallery-item" id="project8"></div>
+                <div class="gallery-item" id="project9"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="socials">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="far fa-envelope"></i></a>
+        </div>
+        <p>Open Source &copy; <span id="year"></span> Mr Kelly's Portfolio, SPQR.</p>
+    </footer>
+    
+    <!-- Scripts  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

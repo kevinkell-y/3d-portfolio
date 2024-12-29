@@ -1,0 +1,200 @@
+/*====================================================
+
+    General Stylings
+    
+======================================================*/
+/* Reset, start from scratch */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/*====================================================
+
+    Navigation Section 
+    
+======================================================*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navbar nav ul li a:hover {
+    color: #2196f3;  /* Change to the same blue on hover */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 21px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive navbar for small screens */
+@media (max-width: 768px) {
+    .navbar nav {
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+    }
+
+    .navbar.active nav {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        padding: 10px;
+    }
+
+    .navbar.active nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar.active nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/*====================================================
+
+    Portfolio Section 
+    
+======================================================*/
+main {
+    margin-top: 80px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style the gallery grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Make the gallery items square */
+.gallery-item {
+    background-color: #000;
+    width: 100%;
+    padding-top: 100%;  /* Maintain square aspect ratio */
+    position: relative;
+    overflow: hidden;  /* Hide anything overflowing the container */
+    border-radius: 1em;
+}
+
+.gallery-item canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure the canvas covers the container */
+}
+
+/* Responsive styling for mobile: 1x1 grid */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;  /* 1 column on mobile */
+        padding: 1em;
+    }
+}
+
+/*====================================================
+
+    Footer Section 
+    
+======================================================*/
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .socials {
+    margin-bottom: 10px;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid #fff;  /* Thin 1px white border */
+    border-radius: 50%;      /* Make the border circular */
+    padding: 10px;           /* Space inside the circle */
+    display: inline-flex;    /* Ensure proper centering of the icon */
+    justify-content: center; /* Center the icon inside the circle */
+    align-items: center;     /* Align the icon inside the circle */
+    width: 40px;             /* Ensure consistent width */
+    height: 40px;            /* Ensure consistent height */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer .socials a:hover {
+    color: #2196f3;          /* Icon color on hover */
+    border-color: #2196f3;   /* Change the border color of the circle */
+}
