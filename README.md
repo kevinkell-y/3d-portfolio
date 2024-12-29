@@ -84,7 +84,7 @@ Both the navbar links and social media icons feature hover effects. They both ch
 To get this project up and running, simply follow these steps:
 
 1. **Clone the Repository**:
-   - `git clone <repository-url>`
+   - `git clone https://github.com/kevinkell-y/3d-portfolio.git`
    
 2. **Navigate to the Project Directory**:
    - `cd 3D-Portfolio`
